@@ -7,9 +7,9 @@ theme: default
 
 3rd Annual workshop on bioinformatics and variant interpretation in InPreD
 
-<https://inpred.github.io/25-06_bioinfo_ws/>
+<https://inpred.github.io/25-06_bioinfo_ws/develop_and_collab>
 
-![bg right](img/tromso01.png)
+![bg right](../img/tromso01.png)
 
 ---
 
@@ -22,6 +22,6 @@ theme: default
 
 ---
 
-![](img/collaboration_docs01.png)
+![](../img/collaboration_docs01.png)
 
 This is a **private repo** at <https://github.com/InPreD/collaboration_docs> 
