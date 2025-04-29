@@ -10,10 +10,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    matrix:
-      presentation:
-        - bioinfo_ws
-        - develop_and_collab
+    strategy:
+      matrix:
+        presentation:
+          - bioinfo_ws
+          - develop_and_collab
     permissions:
       contents: write
     steps:
