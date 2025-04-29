@@ -48,6 +48,22 @@ jobs:
           args: ${{ matrix.presentation }}/README.md --allow-local-files -o build/${{ matrix.presentation }}/README.pptx
         env:
           MARP_USER: root:root
+      -
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-folder
+          path: build
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+    steps:
+      -
+        uses: actions/download-artifact@v4
+        with:
+          name: build-folder
+          path: build
       - 
         name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
