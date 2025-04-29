@@ -25,9 +25,6 @@ jobs:
         name: Ensure build dir exists
         run: mkdir -p build
       -
-        name: Copy images directory (if exists)
-        run: if [[ -d img ]]; then cp -R img build/img; fi
-      -
         name: Marp Build (README)
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
@@ -59,6 +56,15 @@ jobs:
     permissions:
       contents: write
     steps:
+      - 
+        name: Checkout code
+        uses: actions/checkout@v4
+      - 
+        name: Ensure build dir exists
+        run: mkdir -p build
+      -
+        name: Copy images directory (if exists)
+        run: if [[ -d img ]]; then cp -R img build/img; fi
       -
         uses: actions/download-artifact@v4
         with:
