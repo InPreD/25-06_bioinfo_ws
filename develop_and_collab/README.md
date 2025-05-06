@@ -81,7 +81,9 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ## 2. Development
 
-### 2. Start off by creating a repository with an empty README.md and LICENSE file, clone it to your local environment and then start developing
+### 2. Start off by creating a repository with an empty README.md and LICENSE file
+
+- clone it to your local environment and then start developing
 
 ![](../img/github_inpred_group01.png)
 
@@ -95,21 +97,79 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-- .
-
 ## 2. Development
 
 ### 4. Commit and push changes early and often to allow others to follow along
 
-![](../img/github_inpred_group01.png)
+![](../img/git01.png)
 
 ---
 
-- Follow best practices for the selected programming language. Generally recommended are unit testing (cover test cases from different nodes), keeping functions short, avoid hard-coding, sensible use of packages and libraries.
-- Use git commit message conventions.
-- Keep the features and PRs small (ideally one PR per feature) to have a tight feedback loop. Focus on one small problem for one feature. Include at least one representative from each node (option to opt out) and set a deadline (e.g. two weeks).
-- Pair-programming should be used where it makes sense to enable knowledge and expertise transfer between the different groups.
-- Use github actions to test, lint and publish or build your project.
-- Provide at least a docker image (can be converted to apptainer) and push them to the inpred group at docker hub.
-- Write documentation and check with others that it is understandable.
-- Tag and release code that is ready for production using semantic versioning.
+## 2. Development
+
+### 5. Follow best practices for the selected programming language
+
+- unit testing (cover test cases from different nodes)
+- keeping functions short
+- avoid hard-coding
+- sensible use of packages and libraries
+
+---
+
+## 2. Development
+
+### 6. Use git commit message conventions
+
+- `feat`, `fix`, `ci`, `test`, `chore`, `docs`, `style`, `perf`, `build`, `refactor`
+
+---
+
+## 2. Development
+
+### 7. Keep the features and PRs small (ideally one PR per feature) to have a tight feedback loop
+
+- focus on one small problem for one feature
+- include at least one representative from each node (option to opt out) and set a deadline (e.g. two weeks)
+
+---
+
+## 2. Development
+
+### 8. Pair-programming should be used where it makes sense
+
+- enable knowledge and expertise transfer between the different groups
+
+---
+
+## 2. Development
+
+### 9. Use github actions to test, lint and publish or build your project
+
+![](../img/github_actions01.png)
+
+---
+
+## 2. Development
+
+### 10. Provide at least a docker image (can be converted to apptainer)
+
+- push them to the inpred group at docker hub
+
+![](../img/dockerhub01.png)
+
+---
+
+## 2. Development
+
+### 11. Write documentation and check with others that it is understandable
+
+---
+
+## 2. Development
+
+### 12. Tag and release code that is ready for production using semantic versioning
+
+- `MAJOR`.`MINOR`.`PATCH`
+
+---
+
