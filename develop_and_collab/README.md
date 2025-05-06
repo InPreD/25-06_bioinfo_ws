@@ -75,7 +75,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ### 1. Code should be made available through InPreD group on github
 
-![](../img/github_inpred_group01.png)
+![width:600px](../img/github_inpred_group01.png)
 
 ---
 
@@ -85,7 +85,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 - clone it to your local environment and then start developing
 
-![](../img/github_inpred_group01.png)
+![width:200px](../img/github_inpred_group01.png)
 
 ---
 
@@ -173,3 +173,6 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
+Takk for oppmerksomheten
+
+![bg right](../img/tromso01.png)
