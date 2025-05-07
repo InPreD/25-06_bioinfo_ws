@@ -23,7 +23,7 @@ theme: default
 
 ---
 
-![](../img/collaboration_docs01.png)
+![width:700px](../img/collaboration_docs01.png)
 
 This is a **private repo** at <https://github.com/InPreD/collaboration_docs> 
 
@@ -71,25 +71,25 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
-### 1. Code should be made available through InPreD group on github
+### 1. Code should be made available through InPreD group on GitHub
 
 ![width:600px](../img/github_inpred_group01.png)
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 2. Start off by creating a repository with an empty README.md and LICENSE file
 
 - clone it to your local environment and then start developing
 
-![width:200px](../img/github_inpred_group01.png)
+![width:300px](../img/new_repo01.png)
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 3. Use the agreed branching strategy (suggested: simplified Gitflow workflow)
 
@@ -97,7 +97,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 4. Commit and push changes early and often to allow others to follow along
 
@@ -105,7 +105,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 5. Follow best practices for the selected programming language
 
@@ -116,7 +116,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 6. Use git commit message conventions
 
@@ -124,7 +124,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 7. Keep the features and PRs small (ideally one PR per feature) to have a tight feedback loop
 
@@ -133,7 +133,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 8. Pair-programming should be used where it makes sense
 
@@ -141,15 +141,15 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
-### 9. Use github actions to test, lint and publish or build your project
+### 9. Use GitHub actions to test, lint and publish or build your project
 
 ![](../img/github_actions01.png)
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 10. Provide at least a docker image (can be converted to apptainer)
 
@@ -159,17 +159,32 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 11. Write documentation and check with others that it is understandable
 
 ---
 
-## 2. Development
+## 3. Development
 
 ### 12. Tag and release code that is ready for production using semantic versioning
 
 - `MAJOR`.`MINOR`.`PATCH`
+
+---
+
+## 4. Issue and bug handling
+
+- report on GitHub and then handled there - discussion and code fixing tightly linked
+- easier to find previous problems, share knowledge and track the development process
+
+---
+
+## 5. New features
+
+- add as issues to the corresponding project
+- discuss in the bioinformatics meetings or a small focus group meeting
+- create a pull request from the issues and allow all nodes to give feedback on the implemented changes
 
 ---
 
