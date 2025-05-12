@@ -205,4 +205,42 @@ $ git push
 
 ---
 
+### Use github action to automatically run tests on push
+
+- add `.github/workflows/main.yml`:
+
+```yaml
+name: Python test
+on: push
+
+jobs:
+  test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Check out the repo
+        uses: actions/checkout@v4
+      -
+        name: Set up Python 3.12.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12.8
+      - 
+        name: Install dependencies
+        run: pip install -r requirements.txt
+      - 
+        name: Unit testing 
+        uses: pavelzw/pytest-action@v2
+        with:
+          verbose: true
+          emoji: true
+          job-summary: true
+          custom-arguments: -q
+          click-to-expand: true
+          report-title: 'Bioinfo workshop unit testing'
+```
+
+---
+
 ## 2. Nextflow
