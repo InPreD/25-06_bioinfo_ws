@@ -66,21 +66,56 @@ def test_add():
 
 ---
 
-### Example
+### Set up unit testing for your functions
 
-```python
-# calculator.py
-def add(x, y):
-    """add numbers"""
-    return x + y
-```
+- install pytest
 
-```python
-# test_calculator.py
-import calculator
+  ```bash
+  $ pip install pytest
+  ```
 
-def test_add():
-    assert calculator.add(1, 2) == 3
+- add your function to a module at `my_module/my_module.py`
+- add your unit test at `my_module/tests/my_module_test.py`
+- in the test file import your module `from my_module.my_module import my_function`
+
+---
+
+### First exercise
+
+- go to https://github.com/InPreD/25-06_bioinfo_ws_unit_testing
+
+![width:500px](../img/unit_testing_codespace01.png)
+
+---
+
+### First exercise
+
+![](../img/unit_testing_codespace02.png)
+
+---
+
+### First exercise
+
+- pytest was already installed in the codespace
+- the suggested layout was already applied
+- create a branch for your work:
+
+  ```bash
+  $ git checkout -b unit-tests-<your name>
+  ```
+
+- start with the first exercise in `first/tests/first_test.py`
+- whenever you are done, commit your changes (use [commit message conventions](https://inpred.github.io/24-03_bioinfo_ws/#19)):
+
+  ```bash
+  $ git add first/tests/first_test.py
+  $ git commit -m "test: <your commit message>"
+  ```
+
+- and we push them to GitHub:
+
+```bash
+$ git push --set-upstream origin unit-tests-<your name>
 ```
 
 ---
