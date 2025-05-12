@@ -84,7 +84,7 @@ def test_add():
 
 - go to https://github.com/InPreD/25-06_bioinfo_ws_unit_testing
 
-![width:500px](../img/unit_testing_codespace01.png)
+![width:700px](../img/unit_testing_codespace01.png)
 
 ---
 
@@ -116,6 +116,89 @@ def test_add():
 
 ```bash
 $ git push --set-upstream origin unit-tests-<your name>
+```
+
+---
+
+### Handle exceptions in unit tests
+
+- functions can raise exceptions and we would like to test for those
+- import `pytest` to have access to `raises()`
+- add `with`-block to handle the exception:
+
+```python
+import calculator
+import pytest
+
+def test_add_exception():
+    with pytest.raises(TypeError):
+        assert add("one", "two") == None
+```
+
+---
+
+### Second exercise
+
+- continue with the second exercise in `second/tests/second_test.py`
+- whenever you are done, commit your changes (use [commit message conventions](https://inpred.github.io/24-03_bioinfo_ws/#19)):
+
+  ```bash
+  $ git add second/tests/second_test.py
+  $ git commit -m "test: <your commit message>"
+  ```
+
+- and we push them to GitHub:
+
+```bash
+$ git push
+```
+
+---
+
+### Make unit tests table-driven by using parametrize
+
+- having more than one test case results in repeating a lot of code (one function per test case)
+- to condense this as much as possible (ideally one unit test per function), we can use the `pytest` decorator `parametrize`
+- again, import `pytest` to gain access to the decorator
+- add the decorator `@pytest.mark.parametrize` as a header to your function
+- define the required variables (input, exception, output)
+- add your test cases as a list of tuples (one tuple per case)
+- also use `nullcontext` from the module `contextlib` to account for cases without exceptions
+
+```python
+import calculator
+import pytest
+
+from contextlib import nullcontext
+
+@pytest.mark.parametrize(
+    "x, y, exception, want",
+    [
+        (1, 2, nullcontext(), 3),
+        ("one", "two", pytest.raises(TypeError), None)
+    ]
+)
+def test_add(x, y, exception, want):
+    with exception:
+        assert add(x, y) == want
+```
+
+---
+
+### Third exercise
+
+- continue with the third exercise in `third/tests/third_test.py`
+- whenever you are done, commit your changes (use [commit message conventions](https://inpred.github.io/24-03_bioinfo_ws/#19)):
+
+  ```bash
+  $ git add third/tests/third_test.py
+  $ git commit -m "test: <your commit message>"
+  ```
+
+- and we push them to GitHub:
+
+```bash
+$ git push
 ```
 
 ---
