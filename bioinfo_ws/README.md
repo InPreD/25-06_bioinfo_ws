@@ -165,6 +165,8 @@ $ git push
 - add your test cases as a list of tuples (one tuple per case)
 - also use `nullcontext` from the module `contextlib` to account for cases without exceptions
 
+---
+
 ```python
 import calculator
 import pytest
