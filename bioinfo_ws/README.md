@@ -205,7 +205,7 @@ $ git push
 
 ---
 
-### Use github action to automatically run tests on push
+### Use GitHub action to automatically run tests on push
 
 - add `.github/workflows/main.yml`:
 
@@ -243,7 +243,7 @@ jobs:
 
 ---
 
-### Use github action to automatically run tests on push
+### Use GitHub action to automatically run tests on push
 
 - if you don't want to write all of that, merge the branch containing the file into your branch:
 
@@ -268,6 +268,14 @@ $ git merge add-github-action
 ```bash
 $ git push
 ```
+
+---
+
+Thank you for your attention!
+
+Day 1 done!
+
+![bg right](../img/tromso01.png)
 
 ---
 
