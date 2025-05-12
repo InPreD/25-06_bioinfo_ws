@@ -243,4 +243,32 @@ jobs:
 
 ---
 
+### Use github action to automatically run tests on push
+
+- if you don't want to write all of that, merge the branch containing the file into your branch:
+
+```bash
+$ git merge add-github-action
+```
+
+---
+
+### Fourth exercise
+
+- write unit tests for the functions in `fourth/fourth.py`
+- whenever you are done, commit your changes (use [commit message conventions](https://inpred.github.io/24-03_bioinfo_ws/#19)):
+
+  ```bash
+  $ git add third/tests/third_test.py
+  $ git commit -m "test: <your commit message>"
+  ```
+
+- and we push them to GitHub:
+
+```bash
+$ git push
+```
+
+---
+
 ## 2. Nextflow
