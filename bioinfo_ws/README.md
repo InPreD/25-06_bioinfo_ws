@@ -468,3 +468,19 @@ workflow {
       sayHello(greeting_ch) | view
   }
   ```
+  
+  - run this a couple of times:
+
+  ```bash
+  $ nextflow run hello_world.nf -ansi-log false
+  ```
+
+---
+
+#### Channels
+
+- processes communicate through channels
+- two major properties:
+  - Sending a message is an asynchronous (i.e. non-blocking) operation
+  - Receiving a message is a synchronous (i.e. blocking) operation
+- please refer to the [nextflow docs about channels](https://www.nextflow.io/docs/latest/channel.html)
