@@ -118,18 +118,22 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 <li>
 <p>and we push them to GitHub:</p>
-</li>
-</ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git push --set-upstream origin unit-tests-&lt;your name&gt;
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="default" style="--theme:default;">
 <h3 id="handle-exceptions-in-unit-tests">Handle exceptions in unit tests</h3>
 <ul>
-<li>functions can raise exceptions and we would like to test for those</li>
-<li>import <code>pytest</code> to have access to <code>raises()</code></li>
-<li>add <code>with</code>-block to handle the exception:</li>
-</ul>
+<li>
+<p>functions can raise exceptions and we would like to test for those</p>
+</li>
+<li>
+<p>import <code>pytest</code> to have access to <code>raises()</code></p>
+</li>
+<li>
+<p>add <code>with</code>-block to handle the exception:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> calculator
 <span class="hljs-keyword">import</span> pytest
 
@@ -137,6 +141,8 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
     <span class="hljs-keyword">with</span> pytest.raises(TypeError):
         <span class="hljs-keyword">assert</span> add(<span class="hljs-string">&quot;one&quot;</span>, <span class="hljs-string">&quot;two&quot;</span>) == <span class="hljs-literal">None</span>
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="default" style="--theme:default;">
 <h3 id="second-exercise">Second exercise</h3>
@@ -152,10 +158,10 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 <li>
 <p>and we push them to GitHub:</p>
-</li>
-</ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git push
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="default" style="--theme:default;">
 <h3 id="make-unit-tests-table-driven-by-using-parametrize">Make unit tests table-driven by using parametrize</h3>
@@ -201,16 +207,16 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 <li>
 <p>and we push them to GitHub:</p>
-</li>
-</ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git push
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="default" style="--theme:default;">
 <h3 id="use-github-action-to-automatically-run-tests-on-push">Use GitHub action to automatically run tests on push</h3>
 <ul>
-<li>add <code>.github/workflows/main.yml</code>:</li>
-</ul>
+<li>
+<p>add <code>.github/workflows/main.yml</code>:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Python</span> <span class="hljs-string">test</span>
 <span class="hljs-attr">on:</span> <span class="hljs-string">push</span>
 
@@ -241,14 +247,18 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
           <span class="hljs-attr">click-to-expand:</span> <span class="hljs-literal">true</span>
           <span class="hljs-attr">report-title:</span> <span class="hljs-string">&#x27;Bioinfo workshop unit testing&#x27;</span>
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="default" style="--theme:default;">
 <h3 id="use-github-action-to-automatically-run-tests-on-push-1">Use GitHub action to automatically run tests on push</h3>
 <ul>
-<li>if you don't want to write all of that, merge the branch containing the file into your branch:</li>
-</ul>
+<li>
+<p>if you don't want to write all of that, merge the branch containing the file into your branch:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git merge add-github-action
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="default" style="--theme:default;">
 <h3 id="fourth-exercise">Fourth exercise</h3>
@@ -264,10 +274,10 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 <li>
 <p>and we push them to GitHub:</p>
-</li>
-</ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git push
 </code></pre>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../img/tromso01.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="19" data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <p>Thank you for your attention!</p>
@@ -398,6 +408,37 @@ workflow {
         path <span class="hljs-string">&#x27;output.txt&#x27;</span>
     ...
 }
+</code></pre>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="default" style="--theme:default;">
+<ul>
+<li>
+<p>add a greeting variable</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java">process sayHello {
+
+    publishDir <span class="hljs-string">&#x27;results&#x27;</span>, mode: <span class="hljs-string">&#x27;copy&#x27;</span>
+
+    input:
+        val greeting
+
+    output:
+        path <span class="hljs-string">&#x27;output.txt&#x27;</span>
+    
+    script:
+    <span class="hljs-string">&quot;&quot;&quot;
+    echo &#x27;$greeting&#x27; &gt; output.txt
+    &quot;&quot;&quot;</span>
+}
+
+workflow {
+
+    <span class="hljs-comment">// emit a greeting</span>
+    sayHello(params.greeting)
+}
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ nextflow run hello_world.nf --greeting <span class="hljs-string">&#x27;Heisann!&#x27;</span>
 </code></pre>
 </li>
 </ul>
