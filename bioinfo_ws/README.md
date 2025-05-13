@@ -84,7 +84,7 @@ def test_add():
 
 - go to https://github.com/InPreD/25-06_bioinfo_ws_unit_testing
 
-![width:700px](../img/unit_testing_codespace01.png)
+  ![width:700px](../img/unit_testing_codespace01.png)
 
 ---
 
@@ -303,7 +303,7 @@ Day 1 done!
 - independently and isolated processes - not sharing common (writable) state
 - communication via asynchronous first-in, first-out (FIFO) queues, called `channels`
 
-![350px](../img/nextflow_process01.png)
+  ![350px](../img/nextflow_process01.png)
 
 ---
 
@@ -313,7 +313,7 @@ Day 1 done!
 - provides abstraction between workflow’s functional logic and underlying execution system/runtime
 - workflow runs seamlessly on local computer, HPC cluster or cloud
 
-![800px](../img/nextflow_executor01.png)
+  ![800px](../img/nextflow_executor01.png)
 
 ---
 
@@ -321,14 +321,14 @@ Day 1 done!
 
 - go to https://github.com/InPreD/25-06_bioinfo_ws_nextflow
 
-![width:700px](../img/nextflow_codespace01.png)
+  ![width:700px](../img/nextflow_codespace01.png)
 
 ---
 
 - create a branch for your work:
 
   ```bash
-  $ git checkout -b unit-tests-<your name>
+  $ git checkout -b nextflow-<your name>
   ```
 
 - create a new file `hello_world.nf`
@@ -359,3 +359,31 @@ workflow {
     sayHello()
 }
 ```
+
+---
+
+- try to run it
+
+  ```bash
+  $ nextflow run hello_world.nf
+  ```
+
+  ![](../img/nextflow_run01.png)
+
+- check if you can find `work/33/7106de/output.txt`
+- explore the other files that are in `work/33/7106de/`
+
+---
+
+- add a directory to which results should be published
+
+  ```java
+  process sayHello {
+  
+      publishDir 'results', mode: 'copy'
+  
+      output:
+          path 'output.txt'
+      ...
+  }
+  ```
