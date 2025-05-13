@@ -114,9 +114,9 @@ def test_add():
 
 - and we push them to GitHub:
 
-```bash
-$ git push --set-upstream origin unit-tests-<your name>
-```
+  ```bash
+  $ git push --set-upstream origin unit-tests-<your name>
+  ```
 
 ---
 
@@ -126,14 +126,14 @@ $ git push --set-upstream origin unit-tests-<your name>
 - import `pytest` to have access to `raises()`
 - add `with`-block to handle the exception:
 
-```python
-import calculator
-import pytest
-
-def test_add_exception():
-    with pytest.raises(TypeError):
-        assert add("one", "two") == None
-```
+  ```python
+  import calculator
+  import pytest
+  
+  def test_add_exception():
+      with pytest.raises(TypeError):
+          assert add("one", "two") == None
+  ```
 
 ---
 
@@ -149,9 +149,9 @@ def test_add_exception():
 
 - and we push them to GitHub:
 
-```bash
-$ git push
-```
+  ```bash
+  $ git push
+  ```
 
 ---
 
@@ -199,9 +199,9 @@ def test_add(x, y, exception, want):
 
 - and we push them to GitHub:
 
-```bash
-$ git push
-```
+  ```bash
+  $ git push
+  ```
 
 ---
 
@@ -209,37 +209,37 @@ $ git push
 
 - add `.github/workflows/main.yml`:
 
-```yaml
-name: Python test
-on: push
-
-jobs:
-  test:
-    name: Run unit tests
-    runs-on: ubuntu-latest
-    steps:
-      - 
-        name: Check out the repo
-        uses: actions/checkout@v4
-      -
-        name: Set up Python 3.12.8
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.12.8
-      - 
-        name: Install dependencies
-        run: pip install -r requirements.txt
-      - 
-        name: Unit testing 
-        uses: pavelzw/pytest-action@v2
-        with:
-          verbose: true
-          emoji: true
-          job-summary: true
-          custom-arguments: -q
-          click-to-expand: true
-          report-title: 'Bioinfo workshop unit testing'
-```
+  ```yaml
+  name: Python test
+  on: push
+  
+  jobs:
+    test:
+      name: Run unit tests
+      runs-on: ubuntu-latest
+      steps:
+        - 
+          name: Check out the repo
+          uses: actions/checkout@v4
+        -
+          name: Set up Python 3.12.8
+          uses: actions/setup-python@v4
+          with:
+            python-version: 3.12.8
+        - 
+          name: Install dependencies
+          run: pip install -r requirements.txt
+        - 
+          name: Unit testing 
+          uses: pavelzw/pytest-action@v2
+          with:
+            verbose: true
+            emoji: true
+            job-summary: true
+            custom-arguments: -q
+            click-to-expand: true
+            report-title: 'Bioinfo workshop unit testing'
+  ```
 
 ---
 
@@ -247,9 +247,9 @@ jobs:
 
 - if you don't want to write all of that, merge the branch containing the file into your branch:
 
-```bash
-$ git merge add-github-action
-```
+  ```bash
+  $ git merge add-github-action
+  ```
 
 ---
 
@@ -265,9 +265,9 @@ $ git merge add-github-action
 
 - and we push them to GitHub:
 
-```bash
-$ git push
-```
+  ```bash
+  $ git push
+  ```
 
 ---
 
@@ -387,3 +387,35 @@ workflow {
       ...
   }
   ```
+
+---
+
+- add a greeting variable
+
+  ```java
+  process sayHello {
+  
+      publishDir 'results', mode: 'copy'
+  
+      input:
+          val greeting
+  
+      output:
+          path 'output.txt'
+      
+      script:
+      """
+      echo '$greeting' > output.txt
+      """
+  }
+
+  workflow {
+  
+      // emit a greeting
+      sayHello(params.greeting)
+  }
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf --greeting 'Heisann!'
+  ``` 
