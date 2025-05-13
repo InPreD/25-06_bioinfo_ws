@@ -280,3 +280,82 @@ Day 1 done!
 ---
 
 ## 2. Nextflow
+
+---
+
+### What is nextflow?
+
+- workflow orchestration engine, domain-specific language (in contrast to general-purpose language, e.g. python)
+- easy to write data-intensive computational workflows
+- extension of groovy which is a superset of Java
+- core features:
+  - portability and reproducibility
+  - scalability of parallelization and deployment
+  - integration of existing tools, systems, and industry standards
+
+---
+
+### How does it work?
+
+#### Processes and channels
+
+- different processes joined together - each written in any language that can be executed by Linux platform
+- independently and isolated processes - not sharing common (writable) state
+- communication via asynchronous first-in, first-out (FIFO) queues, called `channels`
+
+![500px](../img/nextflow_process01.png)
+
+---
+
+#### Execution abstraction
+
+- process = *what* is executed <-> executor = *how* it is executed
+- provides abstraction between workflow’s functional logic and underlying execution system/runtime
+- workflow runs seamlessly on local computer, HPC cluster or cloud
+
+![600px](../img/nextflow_executor01.png)
+
+---
+
+### Let's get started
+
+- go to https://github.com/InPreD/25-06_bioinfo_ws_nextflow
+
+![width:700px](../img/unit_testing_codespace01.png)
+
+---
+
+- create a branch for your work:
+
+  ```bash
+  $ git checkout -b unit-tests-<your name>
+  ```
+
+- create a new file `hello_world.nf`
+- write a workflow which outputs a file containing "Hello World!"
+
+---
+
+```java
+#!/usr/bin/env nextflow
+
+/*
+ * Use echo to print 'Hello World!' to a file
+ */
+process sayHello {
+
+    output:
+        path 'output.txt'
+
+    script:
+    """
+    echo 'Hello World!' > output.txt
+    """
+}
+
+workflow {
+
+    // emit a greeting
+    sayHello()
+}
+```
