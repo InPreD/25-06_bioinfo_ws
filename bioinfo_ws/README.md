@@ -418,4 +418,53 @@ workflow {
 
   ```bash
   $ nextflow run hello_world.nf --greeting 'Heisann!'
-  ``` 
+  ```
+
+---
+
+- move the `params.greeting` into the `hello_world.nf`:
+
+  ```java
+  params.greeting = 'Heisann!'
+
+  process sayHello {
+  
+      publishDir 'results', mode: 'copy'
+      ...
+  }
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf --greeting 'Hejsan!'
+  ```
+
+---
+
+- transform greetings into a channel
+
+  ```java
+  process sayHello {
+  
+      input:
+          val greeting
+  
+      output:
+          stdout
+      
+      script:
+      """
+      echo '$greeting'
+      """
+  }
+
+  workflow {
+  
+      greeting_ch = Channel.of('Alo', 'Salut', 'Sunt eu')
+      // emit a greeting
+      sayHello(greeting_ch) | view
+  }
+  ```
