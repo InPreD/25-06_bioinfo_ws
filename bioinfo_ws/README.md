@@ -303,7 +303,7 @@ Day 1 done!
 - independently and isolated processes - not sharing common (writable) state
 - communication via asynchronous first-in, first-out (FIFO) queues, called `channels`
 
-![500px](../img/nextflow_process01.png)
+![350px](../img/nextflow_process01.png)
 
 ---
 
@@ -313,7 +313,7 @@ Day 1 done!
 - provides abstraction between workflow’s functional logic and underlying execution system/runtime
 - workflow runs seamlessly on local computer, HPC cluster or cloud
 
-![600px](../img/nextflow_executor01.png)
+![800px](../img/nextflow_executor01.png)
 
 ---
 
@@ -321,7 +321,7 @@ Day 1 done!
 
 - go to https://github.com/InPreD/25-06_bioinfo_ws_nextflow
 
-![width:700px](../img/unit_testing_codespace01.png)
+![width:700px](../img/nextflow_codespace01.png)
 
 ---
 
