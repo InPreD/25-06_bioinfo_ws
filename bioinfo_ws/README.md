@@ -540,10 +540,10 @@ workflow {
   process convertToUpper {
 
       input:
-          path lower
+          val lower
 
       output:
-          lower
+          stdout
 
       script:
       """
@@ -574,3 +574,96 @@ workflow {
   ```bash
   $ nextflow run hello_world.nf -ansi-log false --greeting greetings.csv
   ```
+
+---
+
+- run first process inside a container
+
+  ```java
+  process sayHello {
+  
+      container 'ubuntu:24.04'
+      input:
+          val greeting
+  
+      output:
+          stdout
+      
+      script:
+      """
+      echo '$greeting'
+      """
+  }
+  ```
+
+- add `nextflow.config` containing
+
+  ```conf
+  docker.enabled = true
+  ```
+
+- please refer to the [nextflow docs on configuration](https://www.nextflow.io/docs/latest/config.html)
+
+---
+
+- check your docker images
+
+  ```bash
+  $ docker images
+  ```
+
+- now run
+
+  ```bash
+  $ nextflow run hello_world.nf -ansi-log false --greeting greetings.csv
+  ```
+
+- check your docker images again
+
+  ```bash
+  $ docker images
+  ```
+
+---
+
+- restructure you workflow a bit by moving the processes in a `modules/` subfolder
+- each process should get its own file, e.g. `modules/sayHello.nf`
+
+  ```java
+  #!/usr/bin/env nextflow
+
+  process sayHello {
+  
+      input:
+          val greeting
+  
+      output:
+          stdout
+      
+      script:
+      """
+      echo '$greeting'
+      """
+  }
+  ```
+
+---
+
+- include the modules in the header of your workflow file
+
+  ```java
+  include { sayHello       } from './modules/sayHello.nf'
+  include { convertToUpper } from './modules/convertToUpper.nf'
+
+  workflow {
+    ...
+  }
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf -ansi-log false --greeting greetings.csv
+  ```
+
+---
+
+#### nf-core
