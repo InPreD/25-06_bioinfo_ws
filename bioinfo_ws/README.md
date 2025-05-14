@@ -667,3 +667,124 @@ workflow {
 ---
 
 #### nf-core
+
+- diverse project spread across many groups (Seqera, SciLifeLab Sweden, Centre for Genomic Regulation etc.)
+- community effort to collect a curated set of analysis pipelines built using nextflow
+- standardised set of best practices, guidelines, and templates
+- modular, scalable, and portable pipelines - researchers can easily adapt and execute them using own data and compute resources
+- open development, testing, and peer review -> pipelines are robust, well-documented, and validated against real-world datasets
+
+---
+
+- 113 nf-core pipelines (October 2024):
+  - 68 released
+  - 32 under development
+  - 13 archived
+- please refer to the [nf-core website](https://nf-co.re/) for more information and resources
+
+---
+
+- create a pipeline template using `nf-core` tooling
+
+  ```bash
+  $ nf-core pipelines create
+  ```
+
+- in the tui we choose `Let's go`>`Custom` **(OBS! Name should not contain `-`)**
+
+![](../img/nf-core_pipeline_create01.png)
+
+---
+
+- unselect `Toggle all features` and select the following:
+  - `Add configuration files`
+  - `Use code linters`
+  - `Use fastqc`
+  - `Use nf-core components`
+  - `Use nf-schema`
+  - `Add testing profiles`
+- continue with `Continue`>`Finish`>`Continue`>`Finish without creating a repo`>`Close`
+- take a look at the output
+
+---
+
+- **stubbing** = quickly prototype the workflow logic without using the real commands; comparable to dry-run
+- prepare for a stub run by adding mock fastq file to `assets/`
+
+  ```bash
+  $ touch assets/sample1_R1.fastq.gz assets/sample1_R2.fastq.gz assets/sample2_R1.fastq.gz
+  ```
+
+- update `assets/samplesheet.csv` like so
+
+  ```csv
+  sample,fastq_1,fastq_2
+  SAMPLE_PAIRED_END,assets/sample1.fastq_R1.gz,assets/sample1_R2.fastq.gz
+  SAMPLE_SINGLE_END,assets/sample2.fastq_R1.gz
+  ```
+
+---
+
+- run your first nf-core pipeline
+
+  ```bash
+  $ nextflow run . -stub --input assets/samplesheet.csv --outdir results # -ansi-log false
+  ```
+
+---
+
+- add the nf-core module `bwa/mem`
+
+  ```bash
+  $ nf-core modules install bwa/mem
+  ```
+
+- add it to `workflows/test_pipeline.nf`
+
+  ```java
+  include { BWA_MEM                } from '../modules/nf-core/bwa/mem/main'
+  include { FASTQC                 } from '../modules/nf-core/fastqc/main'
+  ...
+      ch_versions = ch_versions.mix(FASTQC.out.versions.first())
+
+      //
+      // MODULE: Run bwa mem
+      //
+      BWA_MEM (
+          ch_samplesheet,
+          [[], []],
+          [[], []],
+          []
+      )
+  ```
+
+---
+
+- in the stub section of `modules/nf-core/bwa/mem/main.nf`, change the version command string to
+
+  ```java
+      """
+      ...
+      cat <<-END_VERSIONS > versions.yml
+      "${task.process}":
+          bwa: mock
+          samtools: mock
+      END_VERSION
+      """
+  ```
+
+  ```bash
+  $ nextflow run . -stub --input assets/samplesheet.csv --outdir results # -ansi-log false
+  ```
+
+---
+
+- try to add other modules from [`nf-core/modules`](https://github.com/nf-core/modules), e.g. `trimmomatic` or `cutadapt`, and link them them to `bwa/mem`
+
+---
+
+Thank you for your attention!
+
+Day 2 done!
+
+![bg right](../img/tromso01.png)
