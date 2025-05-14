@@ -325,7 +325,7 @@ Day 1 done!
 
 ---
 
-- create a branch for your work:
+- create a branch for your work
 
   ```bash
   $ git checkout -b nextflow-<your name>
@@ -463,16 +463,14 @@ workflow {
 
   workflow {
   
-      greeting_ch = Channel.of('Alo', 'Salut', 'Sunt eu')
+      greeting_ch = Channel.of('Alo', 'Salut', 'Sunt eu').view()
       // emit a greeting
       sayHello(greeting_ch) | view
   }
   ```
   
-  - run this a couple of times:
-
   ```bash
-  $ nextflow run hello_world.nf -ansi-log false
+  $ nextflow run hello_world.nf -ansi-log false # run it several times
   ```
 
 ---
@@ -484,3 +482,95 @@ workflow {
   - Sending a message is an asynchronous (i.e. non-blocking) operation
   - Receiving a message is a synchronous (i.e. blocking) operation
 - please refer to the [nextflow docs about channels](https://www.nextflow.io/docs/latest/channel.html)
+
+---
+
+- create a `.csv` file containing our greetings which will serve as input
+
+  ```csv
+  Alo
+  Salut
+  Sunt eu
+  ```
+
+- create channel from the file using the channel factory `fromPath()`
+
+  ```java
+  workflow {
+  
+      greeting_ch = Channel.fromPath(params.greeting).view()
+      // emit a greeting
+      sayHello(greeting_ch) | view
+  }
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf -ansi-log false --greeting greetings.csv
+  ```
+
+---
+
+- try to manipulate a channel by using the operators `splitCsv()` and `map()`
+
+  ```java
+  workflow {
+  
+      greeting_ch = Channel.fromPath(params.greeting)
+                           .view( it -> "Before splitCsv: $it" )
+                           .splitCsv()
+                           .view( it -> "After splitCsv: $it" )
+                           .map( item -> item[0] )
+                           .view( it -> "After map: $it" )
+      // emit a greeting
+      sayHello(greeting_ch) | view
+  }
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf -ansi-log false --greeting greetings.csv
+  ```
+
+- please refer to the [nextflow docs about channel operators](https://www.nextflow.io/docs/latest/reference/operator.html)
+
+---
+
+- add a second process
+
+  ```java
+  process convertToUpper {
+
+      input:
+          path lower
+
+      output:
+          lower
+
+      script:
+      """
+      echo '$lower' | tr '[a-z]' '[A-Z]'
+      """
+  }
+  ```
+
+---
+
+- include the process in the workflow and link it to the first one
+
+  ```java
+  workflow {
+  
+      greeting_ch = Channel.fromPath(params.greeting)
+                           .view( it -> "Before splitCsv: $it" )
+                           .splitCsv()
+                           .view( it -> "After splitCsv: $it" )
+                           .map( item -> item[0] )
+                           .view( it -> "After map: $it" )
+      // emit a greeting
+      sayHello(greeting_ch) | view
+      convertToUpper(sayHello.out) | view
+  }
+  ```
+
+  ```bash
+  $ nextflow run hello_world.nf -ansi-log false --greeting greetings.csv
+  ```
