@@ -137,6 +137,7 @@ This is a **private repo** at <https://github.com/InPreD/collaboration_docs>
 
 ### 8. Pair-programming should be used where it makes sense
 
+- **pair-programming:** two programmers work together at one workstation; *driver* writes code while *observer/navigator* reviews each line of code as it is typed
 - enable knowledge and expertise transfer between the different groups
 
 ---
