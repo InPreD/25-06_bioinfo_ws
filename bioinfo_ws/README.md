@@ -46,12 +46,12 @@ def test_add():
 
 ### Why do we need unit testing?
 
-- early defect detection
-- code quality improvement
-- facilitates refactoring
-- faster development cycles
-- better documentation
-- enables more frequent releases
+- **early defect detection** - catch bugs before integration with other components
+- **code quality improvement** - reliable, maintainable, scalable
+- **facilitates refactoring** - depending on level of refactoring, unit tests might change as well
+- **better documentation** - unit tests are examples of how the code is expected to behave
+- **faster development cycles** - catch bugs early, reduced manual testing
+- **enables more frequent releases** - quickly identify and fix issues
 
 ---
 
