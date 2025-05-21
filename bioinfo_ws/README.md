@@ -62,7 +62,7 @@ def test_add():
 - what is the input (correct and incorrect)?
 - how to handle incorrect input? (edge cases, invalid data)
 - what does it return?
-- positive and negative results should be tested
+- intended output and errors/exceptions should be tested for
 
 ---
 
