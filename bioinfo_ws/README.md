@@ -248,7 +248,7 @@ def test_add(x, y, exception, want):
 - if you don't want to write all of that, merge the branch containing the file into your branch:
 
   ```bash
-  $ git merge add-github-action
+  $ git merge origin/add-github-action
   ```
 
 ---
