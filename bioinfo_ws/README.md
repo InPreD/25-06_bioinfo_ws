@@ -343,7 +343,7 @@ Day 1 done!
   $ git checkout -b nextflow-<your name>
   ```
 
-- create a new file `hello_world.nf`
+- create a new folder `hello_world`, `cd hello_world` and create a file `hello_world.nf`
 - write a workflow which outputs a file containing "Hello World!"
 
 ---
@@ -696,7 +696,7 @@ workflow {
 
 ---
 
-- create a pipeline template using `nf-core` tooling
+- `cd ..` and create a pipeline template using `nf-core` tooling
 
   ```bash
   $ nf-core pipelines create
@@ -731,11 +731,17 @@ workflow {
 
   ```csv
   sample,fastq_1,fastq_2
-  SAMPLE_PAIRED_END,assets/sample1.fastq_R1.gz,assets/sample1_R2.fastq.gz
-  SAMPLE_SINGLE_END,assets/sample2.fastq_R1.gz
+  SAMPLE_PAIRED_END,assets/sample1_R1.fastq.gz,assets/sample1_R2.fastq.gz
+  SAMPLE_SINGLE_END,assets/sample2_R1.fastq.gz
   ```
 
 ---
+
+- change the process label for in `modules/nf-core/fastqc/main.nf` to
+
+  ```java
+  label 'process_single'
+  ```
 
 - run your first nf-core pipeline
 
@@ -754,8 +760,8 @@ workflow {
 - add it to `workflows/test_pipeline.nf`
 
   ```java
-  include { BWA_MEM                } from '../modules/nf-core/bwa/mem/main'
-  include { FASTQC                 } from '../modules/nf-core/fastqc/main'
+  include { BWA_MEM } from '../modules/nf-core/bwa/mem/main'
+  include { FASTQC  } from '../modules/nf-core/fastqc/main'
   ...
       ch_versions = ch_versions.mix(FASTQC.out.versions.first())
 
@@ -772,7 +778,7 @@ workflow {
 
 ---
 
-- in the stub section of `modules/nf-core/bwa/mem/main.nf`, change the version command string to
+- in `modules/nf-core/bwa/mem/main.nf`, change `label` to `'process_single'` and in the stub section, change the version command string to
 
   ```java
       """
