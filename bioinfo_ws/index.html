@@ -15,9 +15,39 @@
 <p><a href="https://inpred.github.io/25-06_bioinfo_ws/bioinfo_ws">https://inpred.github.io/25-06_bioinfo_ws/bioinfo_ws</a></p>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="default" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-theme="default" style="--theme:default;">
-<h2 id="1-unit-testing">1. Unit testing</h2>
+<h2 id="get-access-to-github-team">Get Access to GitHub team</h2>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-theme="default" style="--theme:default;">
+<ul>
+<li>
+<p>start by sending your GitHub username to Daniel</p>
+</li>
+<li>
+<p>go to <a href="https://github.com/InPreD/">https://github.com/InPreD/</a> and click on <code>Teams</code></p>
+<p><img src="../img/github_teams01.png" alt="" style="width:700px;" /></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-theme="default" style="--theme:default;">
+<ul>
+<li>
+<p>select <code>25-06_bioinfo_ws</code></p>
+<p><img src="../img/github_teams02.png" alt="" style="width:700px;" /></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="default" style="--theme:default;">
+<ul>
+<li>
+<p>select <code>Request to join</code></p>
+<p><img src="../img/github_teams03.png" alt="" style="width:700px;" /></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="default" style="--theme:default;">
+<h2 id="1-unit-testing">1. Unit testing</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="default" style="--theme:default;">
 <h3 id="what-is-unit-testing">What is unit testing?</h3>
 <ul>
 <li>test smallest piece of code that can be logically isolated in software application (function, subroutine, method)</li>
@@ -25,7 +55,7 @@
 <li>should not cross systems (database, filesystem, network) -&gt; integration and functional tests</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="default" style="--theme:default;">
 <h3 id="example">Example</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-comment"># calculator.py</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x, y</span>):
@@ -39,7 +69,7 @@
     <span class="hljs-keyword">assert</span> calculator.add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">3</span>
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="default" style="--theme:default;">
 <h3 id="why-do-we-need-unit-testing">Why do we need unit testing?</h3>
 <ul>
 <li><strong>early defect detection</strong> - catch bugs before integration with other components</li>
@@ -50,7 +80,7 @@
 <li><strong>enables more frequent releases</strong> - quickly identify and fix issues</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="default" style="--theme:default;">
 <h3 id="how-to-design-a-unit-test">How to design a unit test?</h3>
 <ul>
 <li>identify the unit (function, method)</li>
@@ -61,7 +91,7 @@
 <li>intended output and errors/exceptions should be tested for</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="default" style="--theme:default;">
 <h3 id="set-up-unit-testing-for-your-functions">Set up unit testing for your functions</h3>
 <ul>
 <li>
@@ -80,7 +110,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="default" style="--theme:default;">
 <h3 id="first-exercise">First exercise</h3>
 <ul>
 <li>
@@ -89,11 +119,11 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="default" style="--theme:default;">
 <h3 id="first-exercise-1">First exercise</h3>
 <p><img src="../img/unit_testing_codespace02.png" alt="" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="default" style="--theme:default;">
 <h3 id="first-exercise-2">First exercise</h3>
 <ul>
 <li>
@@ -123,7 +153,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="default" style="--theme:default;">
 <h3 id="handle-exceptions-in-unit-tests">Handle exceptions in unit tests</h3>
 <ul>
 <li>
@@ -144,7 +174,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="default" style="--theme:default;">
 <h3 id="second-exercise">Second exercise</h3>
 <ul>
 <li>
@@ -163,7 +193,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="default" style="--theme:default;">
 <h3 id="make-unit-tests-table-driven-by-using-parametrize">Make unit tests table-driven by using parametrize</h3>
 <ul>
 <li>having more than one test case results in repeating a lot of code (one function per test case)</li>
@@ -175,7 +205,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 <li>also use <code>nullcontext</code> from the module <code>contextlib</code> to account for cases without exceptions</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="default" style="--theme:default;">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-keyword">import</span> calculator
 <span class="hljs-keyword">import</span> pytest
 
@@ -193,7 +223,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
         <span class="hljs-keyword">assert</span> add(x, y) == want
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="default" style="--theme:default;">
 <h3 id="third-exercise">Third exercise</h3>
 <ul>
 <li>
@@ -212,7 +242,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="default" style="--theme:default;">
 <h3 id="use-github-action-to-automatically-run-tests-on-push">Use GitHub action to automatically run tests on push</h3>
 <ul>
 <li>
@@ -250,7 +280,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="default" style="--theme:default;">
 <h3 id="use-github-action-to-automatically-run-tests-on-push-1">Use GitHub action to automatically run tests on push</h3>
 <ul>
 <li>
@@ -260,7 +290,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-theme="default" style="--theme:default;">
 <h3 id="fourth-exercise">Fourth exercise</h3>
 <ul>
 <li>
@@ -279,14 +309,14 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../img/tromso01.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="19" data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../img/tromso01.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="23" data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <p>Thank you for your attention!</p>
 <p>Day 1 done!</p>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="default" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="default" style="--theme:default;">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="default" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="default" style="--theme:default;">
 <h2 id="2-nextflow">2. Nextflow</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="default" style="--theme:default;">
 <h3 id="what-is-nextflow">What is nextflow?</h3>
 <ul>
 <li>workflow orchestration engine, domain-specific language (in contrast to general-purpose language, e.g. python)</li>
@@ -301,7 +331,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-theme="default" style="--theme:default;">
 <h3 id="how-does-it-work">How does it work?</h3>
 <h4 id="processes-and-channels">Processes and channels</h4>
 <ul>
@@ -317,7 +347,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-theme="default" style="--theme:default;">
 <h4 id="execution-abstraction">Execution abstraction</h4>
 <ul>
 <li>
@@ -332,7 +362,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-theme="default" style="--theme:default;">
 <h3 id="lets-get-started">Let's get started</h3>
 <ul>
 <li>
@@ -341,7 +371,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>create a branch for your work</p>
@@ -356,7 +386,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="default" style="--theme:default;">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java">#!/usr/bin/env nextflow
 
 <span class="hljs-comment">/*
@@ -380,7 +410,7 @@ workflow {
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>try to run it</p>
@@ -396,7 +426,7 @@ workflow {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>add a directory to which results should be published</p>
@@ -412,7 +442,7 @@ workflow {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>add a greeting variable</p>
@@ -443,7 +473,7 @@ workflow {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>move the <code>params.greeting</code> into the <code>hello_world.nf</code>:</p>
@@ -462,7 +492,7 @@ process sayHello {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>transform greetings into a channel</p>
@@ -492,7 +522,7 @@ workflow {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-theme="default" style="--theme:default;">
 <h4 id="channels">Channels</h4>
 <ul>
 <li>processes communicate through channels</li>
@@ -505,7 +535,7 @@ workflow {
 <li>please refer to the <a href="https://www.nextflow.io/docs/latest/channel.html">nextflow docs about channels</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>create a <code>.csv</code> file containing our greetings which will serve as input</p>
@@ -528,7 +558,7 @@ Sunt eu
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>try to manipulate a channel by using the operators <code>splitCsv()</code> and <code>map()</code></p>
@@ -552,7 +582,7 @@ Sunt eu
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>add a second process</p>
@@ -573,7 +603,7 @@ Sunt eu
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>include the process in the workflow and link it to the first one</p>
@@ -595,7 +625,7 @@ Sunt eu
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>run first process inside a container</p>
@@ -625,7 +655,7 @@ Sunt eu
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>check your docker images</p>
@@ -644,7 +674,7 @@ Sunt eu
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>restructure you workflow a bit by moving the processes in a <code>modules/</code> subfolder</p>
@@ -670,7 +700,7 @@ process sayHello {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>include the modules in the header of your workflow file</p>
@@ -686,7 +716,7 @@ workflow {
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-theme="default" style="--theme:default;">
 <h4 id="nf-core">nf-core</h4>
 <ul>
 <li>diverse project spread across many groups (Seqera, SciLifeLab Sweden, Centre for Genomic Regulation etc.)</li>
@@ -696,7 +726,7 @@ workflow {
 <li>open development, testing, and peer review -&gt; pipelines are robust, well-documented, and validated against real-world datasets</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-theme="default" style="--theme:default;">
 <ul>
 <li>113 nf-core pipelines (October 2024):
 <ul>
@@ -708,7 +738,7 @@ workflow {
 <li>please refer to the <a href="https://nf-co.re/">nf-core website</a> for more information and resources</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>create a pipeline template using <code>nf-core</code> tooling</p>
@@ -721,7 +751,7 @@ workflow {
 </ul>
 <p><img src="../img/nf-core_pipeline_create01.png" alt="" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-theme="default" style="--theme:default;">
 <ul>
 <li>unselect <code>Toggle all features</code> and select the following:
 <ul>
@@ -737,7 +767,7 @@ workflow {
 <li>take a look at the output</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p><strong>stubbing</strong> = quickly prototype the workflow logic without using the real commands; comparable to dry-run</p>
@@ -756,7 +786,7 @@ SAMPLE_SINGLE_END,assets/sample2.fastq_R1.gz
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>run your first nf-core pipeline</p>
@@ -765,7 +795,7 @@ SAMPLE_SINGLE_END,assets/sample2.fastq_R1.gz
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>add the nf-core module <code>bwa/mem</code></p>
@@ -792,7 +822,7 @@ include { FASTQC                 } from <span class="hljs-string">&#x27;../modul
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-theme="default" style="--theme:default;">
 <ul>
 <li>
 <p>in the stub section of <code>modules/nf-core/bwa/mem/main.nf</code>, change the version command string to</p>
@@ -810,12 +840,12 @@ include { FASTQC                 } from <span class="hljs-string">&#x27;../modul
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-theme="default" style="--theme:default;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-theme="default" style="--theme:default;">
 <ul>
 <li>try to add other modules from <a href="https://github.com/nf-core/modules"><code>nf-core/modules</code></a>, e.g. <code>trimmomatic</code> or <code>cutadapt</code>, and link them them to <code>bwa/mem</code></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../img/tromso01.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="50" data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../img/tromso01.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="54" data-theme="default" style="--theme:default;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <p>Thank you for your attention!</p>
 <p>Day 2 done!</p>
 </section>
