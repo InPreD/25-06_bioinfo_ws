@@ -365,7 +365,7 @@ $ git commit -m <span class="hljs-string">&quot;test: &lt;your commit message&gt
 </code></pre>
 </li>
 <li>
-<p>create a new file <code>hello_world.nf</code></p>
+<p>create a new folder <code>hello_world</code>, <code>cd hello_world</code> and create a file <code>hello_world.nf</code></p>
 </li>
 <li>
 <p>write a workflow which outputs a file containing &quot;Hello World!&quot;</p>
@@ -727,7 +727,7 @@ workflow {
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-theme="default" style="--theme:default;">
 <ul>
 <li>
-<p>create a pipeline template using <code>nf-core</code> tooling</p>
+<p><code>cd ..</code> and create a pipeline template using <code>nf-core</code> tooling</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ nf-core pipelines create
 </code></pre>
 </li>
@@ -766,14 +766,19 @@ workflow {
 <li>
 <p>update <code>assets/samplesheet.csv</code> like so</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-csv">sample,fastq_1,fastq_2
-SAMPLE_PAIRED_END,assets/sample1.fastq_R1.gz,assets/sample1_R2.fastq.gz
-SAMPLE_SINGLE_END,assets/sample2.fastq_R1.gz
+SAMPLE_PAIRED_END,assets/sample1_R1.fastq.gz,assets/sample1_R2.fastq.gz
+SAMPLE_SINGLE_END,assets/sample2_R1.fastq.gz
 </code></pre>
 </li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-theme="default" style="--theme:default;">
 <ul>
+<li>
+<p>change the process label for in <code>modules/nf-core/fastqc/main.nf</code> to</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java">label <span class="hljs-string">&#x27;process_single&#x27;</span>
+</code></pre>
+</li>
 <li>
 <p>run your first nf-core pipeline</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ nextflow run . -stub --input assets/samplesheet.csv --outdir results <span class="hljs-comment"># -ansi-log false</span>
@@ -790,8 +795,8 @@ SAMPLE_SINGLE_END,assets/sample2.fastq_R1.gz
 </li>
 <li>
 <p>add it to <code>workflows/test_pipeline.nf</code></p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java">include { BWA_MEM                } from <span class="hljs-string">&#x27;../modules/nf-core/bwa/mem/main&#x27;</span>
-include { FASTQC                 } from <span class="hljs-string">&#x27;../modules/nf-core/fastqc/main&#x27;</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java">include { BWA_MEM } from <span class="hljs-string">&#x27;../modules/nf-core/bwa/mem/main&#x27;</span>
+include { FASTQC  } from <span class="hljs-string">&#x27;../modules/nf-core/fastqc/main&#x27;</span>
 ...
     ch_versions = ch_versions.mix(FASTQC.out.versions.first())
 
@@ -811,7 +816,7 @@ include { FASTQC                 } from <span class="hljs-string">&#x27;../modul
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-theme="default" style="--theme:default;">
 <ul>
 <li>
-<p>in the stub section of <code>modules/nf-core/bwa/mem/main.nf</code>, change the version command string to</p>
+<p>in <code>modules/nf-core/bwa/mem/main.nf</code>, change <code>label</code> to <code>'process_single'</code> and in the stub section, change the version command string to</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java">    <span class="hljs-string">&quot;&quot;&quot;
     ...
     cat &lt;&lt;-END_VERSIONS &gt; versions.yml
