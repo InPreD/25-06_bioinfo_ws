@@ -13,6 +13,32 @@ theme: default
 
 ---
 
+## Get Access to GitHub team
+
+---
+
+- start by sending your GitHub username to Daniel
+- go to https://github.com/InPreD/ and click on `Teams`
+
+
+  ![width:700px](../img/github_teams01.png)
+
+---
+
+- select `25-06_bioinfo_ws`
+
+
+  ![width:700px](../img/github_teams02.png)
+
+---
+
+- select `Request to join`
+
+
+  ![width:700px](../img/github_teams03.png)
+
+---
+
 ## 1. Unit testing
 
 ---
