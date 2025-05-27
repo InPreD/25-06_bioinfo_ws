@@ -13,32 +13,6 @@ theme: default
 
 ---
 
-## Get Access to GitHub team
-
----
-
-- start by sending your GitHub username to Daniel
-- go to https://github.com/InPreD/ and click on `Teams`
-
-
-  ![width:700px](../img/github_teams01.png)
-
----
-
-- select `25-06_bioinfo_ws`
-
-
-  ![width:700px](../img/github_teams02.png)
-
----
-
-- select `Request to join`
-
-
-  ![width:700px](../img/github_teams03.png)
-
----
-
 ## 1. Unit testing
 
 ---
@@ -108,7 +82,19 @@ def test_add():
 
 ### First exercise
 
-- go to https://github.com/InPreD/25-06_bioinfo_ws_unit_testing
+- go to https://github.com/InPreD/25-06_bioinfo_ws_unit_testing and create a fork
+
+  ![width:700px](../img/github_fork01.png)
+
+---
+
+- deselect to only fork `main` branch and `Create fork`
+
+  ![width:700px](../img/github_fork02.png)
+
+---
+
+- start codespace in forked repository
 
   ![width:700px](../img/unit_testing_codespace01.png)
 
@@ -345,7 +331,7 @@ Day 1 done!
 
 ### Let's get started
 
-- go to https://github.com/InPreD/25-06_bioinfo_ws_nextflow
+- go to https://github.com/InPreD/25-06_bioinfo_ws_nextflow, fork it and start codespace
 
   ![width:700px](../img/nextflow_codespace01.png)
 
